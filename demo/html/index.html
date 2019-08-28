@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    /*头部图片*/
+    .img{
+        margin:20px  0 0 180px;
+    }
+    /*搜索框*/
+    nav input{
+        position: relative;
+        margin-left: 30px;
+        width:180px;
+        height: 20px;
+        line-height: 20px;
+        top:-12px;
+        font-size: 12px;
+    }
+    .fa-search{
+        position: absolute;
+        width: 25px;
+        height:22px;
+        text-align: center;
+        line-height: 21px;
+        margin-top:41px ;
+        left: 808px;
+        border: 1px solid #cccccc;
+    }
+    /*导航*/
+    nav ul{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #2b2b2b;
+        list-style: none;
+        text-align: center;
+        color: white;
+    }
+    nav ul li{
+        float: left;
+        width: 150px;
+    }
+    nav ul li:nth-child(1){
+        margin-left: 190px;
+    }
+    nav ul li:nth-child(2){
+        background-color: #c3261d;
+    }
+    /*banner图*/
+    .banner{
+        width: 100%;
+        height:450px;
+        background-color: #000000;
+    }
+    /*上一页，下一页*/
+    .fa-angle-left,.fa-angle-right{
+        color: white;
+        font-size: 48px;
+        line-height: 450px;
+    }
+    .fa-angle-left{
+        position: absolute;
+        left: 190px;
+    }
+    .fa-angle-right{
+        position: absolute;
+        right: 190px;
+    }
+    /*轮播内容盒子*/
+    .box{
+        position: relative;
+        display: inline-block;
+        width: 1000px;
+        height:430px;
+        top: 15px;
+        left:267px;
+        overflow: hidden;
+    }
+    #imgBanner{
+        width: 1000px;
+        height:430px;
+        transition: all 1s linear;
+    }
+    /*轮播图片*/
+    .box img{
+        width: 98%;
+    }
+    /*脚部*/
+    /*英文标题*/
+   #title{
+        text-align: center;
+        font-size: 36px;
+        margin-top: 30px;
+    }
+   /*最新动态*/
+    .foot ul{
+        list-style: none;
+        text-align: center;
+        margin-left: 400px;
+        border: 1px solid springgreen;
+    }
+    .foot ul li{
+        float: left;
+        width: 100px;
+        height:30px;
+        line-height: 30px;
+        border-bottom: 1px solid #cccccc;
+    }
+    .foot ul li:nth-child(4){
+        border-bottom: 2px solid #d61b15;
+    }
+    /*描述*/
+    #desc{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    /*6个文字板块*/
+    .left,.right{
+        display: inline-block;
+        width: 575px;
+        height:100px;
+        border: 1px solid darkblue;
+    }
+    .left{
+        margin:15px 0 0 200px;
+
+    }
+    .right{
+        margin:15px 0 0 20px;
+    }
+    /*图片*/
+    .left img,.right img{
+        float: left;
+        /*margin:15px 0 0 30px;*/
+    }
+    /*新闻标题，内容*/
+    .left h5,.left p,.right h5,.right p{
+        display: inline-block;
+        width: 420px;
+        margin: 5px;
+        padding-left: 10px;
+        border: 1px solid sienna;
+    }
+    .left p,.right p{
+        font-size: 12px;
+    }
+    /*日期*/
+    .date{
+        display: inline-block;
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    button{
+        display: block;
+        border: 1px solid #4e4e4e;
+        background-color: #4e4e4e;
+        border-radius: 15px;
+        width: 150px;
+        height:30px;
+        color: white;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        margin: 30px 0 0 660px;
+    }
+</style>
+<body>
+<nav>
+    <img class="img" src="../images/201901020955191025_03.png" alt="">
+    <input type="text" placeholder="请输入关键字搜索">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <img class="img" style="margin-left: 220px" src="../images/201901020955191025_06.png" alt="">
+    <ul>
+        <li>首页</li>
+        <li>关于我们</li>
+        <li>新闻中心</li>
+        <li>服务支持</li>
+        <li>产品中心</li>
+        <li>合作伙伴</li>
+        <li>人才中心</li>
+        <li>联系我们</li>
+    </ul>
+    <div class="banner">
+        <i class="fa fa-angle-left" aria-hidden="true" onclick="prev()"></i>
+        <div class="box">
+            <div id="imgBanner"></div>
+        </div>
+        <i class="fa fa-angle-right" aria-hidden="true" onclick="next()"></i>
+    </div>
+</nav>
+<div class="foot">
+    <p id="title">NEWS CENTER</p>
+    <ul>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>最新动态</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+    </ul>
+    <span id="desc">19年专注喷墨打印，高质量铸就好品牌！</span>
+    <div class="left">
+        <img src="../images/201901020955191025_10.png" alt="">
+        <h5>台湾较大纸箱厂正隆职业落户重庆</h5>
+        <span class="date">2017-08-17</span>
+        <p>乔培伟称，重庆是全国继上海之后拿到数字出版执照的第二个城市，目前数字出版产业基地已经开始运作，他还将带领50-100家</p>
+    </div>
+    <div class="right">
+        <img src="../images/201901020955191025_12.png" alt="">
+        <h5>中科院纳米涂层绿色印刷板材生产线项目xx</h5>
+        <span class="date">2016-04-21</span>
+        <p>中国科学院纳米涂层绿色印刷板材（NP301）生产线项目正式在xx天成股份科技园区签约，“纳米绿色印刷产业基地，xx绿色版”</p>
+    </div><div class="left">
+        <img src="../images/201901020955191025_16.png" alt="">
+        <h5>受纸浆价格影响 7月1日起欧洲纸价再度上</h5>
+        <span class="date">2017-08-17</span>
+        <p>7月1日起，萨佩欧洲公司将在欧洲及海外市场范围内将软包装用纸、标签用纸及纸板的价格提高约6%。徒步铜版纸价格提高了至少1</p>
+    </div><div class="right">
+        <img src="../images/201901020955191025_17.png" alt="">
+        <h5>闽三角包装印刷业一番磨洗曙光在前</h5>
+        <span class="date">2016-04-21</span>
+        <p>闽三角地区，北承江浙沪，南接粤赣桂，西望台湾宝岛，因地理位置优越，闽三角地区堪称台资企业和民营制造业的天堂，鞋业、纺织服</p>
+    </div><div class="left">
+        <img src="../images/201901020955191025_18.png" alt="">
+        <h5>6月英国纸价全面上涨 导致印刷品被迫提价</h5>
+        <span class="date">2017-08-17</span>
+        <p>较近英国印刷周刊网展开的一项调查发现，过去一年中约有40%的印刷商在购买涂布纸时额外承担了11-20%的成本。另外有34</p>
+    </div><div class="right">
+        <img src="../images/201901020955191025_21.png" alt="">
+        <h5>印刷业是不会死的</h5>
+        <span class="date">2016-04-21</span>
+        <p>xxx2016的组织者希望本届xxx能够吸引相比四年前更多的参与者，结合新的产品组合的推出，将再次引领传统业务的发展。</p>
+    </div>
+    <button>查看更多</button>
+</div>
+<script>
+    var arr=["../images/201901020955191025_16.png","../images/201901020955191025_17.png", "../images/201901020955191025_18.png"];
+    var index=0;
+    var imgBanner=document.getElementById("imgBanner");
+    imgBanner.style.backgroundImage="url("+arr[index]+")";
+    var time=setInterval(dis,2000);
+    function dis() {
+        index++;
+        if(index==arr.length){
+            index=0;
+        }
+        imgBanner.style.backgroundImage="url("+arr[index]+")";
+    }
+    //上一页
+    function prev() {
+        clearInterval(time);
+        index--;
+        if(index<0){
+            index=arr.length-1;
+        }
+        imgBanner.style.backgroundImage="url("+arr[index]+")";
+        time=setInterval(dis,2000);
+    }
+//    下一页
+function next() {
+    clearInterval(time);
+    index++;
+    if(index>=arr.length){
+        index=0;
+    }
+    imgBanner.style.backgroundImage="url("+arr[index]+")";
+    time=setInterval(dis,2000);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECMAScript</title>
+</head>
+<body>
+<script>
+    /*day1*/
+    /*1.用代码实现
+
+     变量a中存储的数字10，变量b中存储的数字是3
+
+     1）a除以b后，并取整，在页面输出得到的结果？
+
+     2）将a%b后得到的结果转换为字符串类型，在打印台输出得到的结果，并验证最终的结果数据类型是否为字符串*/
+    var a = 10;
+    var b = 3;
+    var c = parseInt(a/b);
+    var d = String(c);
+    document.write(parseInt(a/b));
+    document.write("<br/>" + typeof c);
+    document.write("<br/>" +d);
+    document.write("<br/>" + typeof d);
+
+    /*
+     2.用代码实现
+
+     输入一数字作为秒数，在页面按小时，分钟，秒的格式输出（ 如输入600，页面显示：0小时10分0秒 ）
+     */
+    var h,m,s;
+    var e=prompt("请输入一个数");
+    document.write("<br>"+e);
+    h = parseInt(e/3600);
+    m = parseInt((e%3600)/60);
+    s = parseInt((e%3600)%60);
+    document.write("<br>"+h+"小时"+m+"分钟"+s+"秒");
+    /*3.用三元运算符实现
+
+     1）小明和妈妈约定，期末考试如果语文数学成绩都是满分100，周末妈妈就带他去游乐园，否则就只有在家改错题
+
+     2）小明考了双百分，妈妈周末带小明去游乐园玩了一天，随后和小明约定，如果明年小明还能拿到双百分并且奥数
+
+     能够获得华杯赛前90名就带他去迪斯尼乐园，否则就只有后年再努力了*/
+    var gread = prompt("请输入成绩");
+    var list  = prompt("请输入名次");
+    if(gread == 100){
+        document.write("<br> 去游乐园");
+    }else{
+        document.write("<br> 在家改错题");
+    }
+    if(gread ==100 && list < 90){
+        document.write("<br> 去迪士尼");
+    }else{
+        document.write("<br> 后年再努力");
+    }
+
+
+    /*3.使用axure画流程图
+
+     1）在淘宝购买商品的整个流程图（注意：购买时如果未登录需要回到登录页面，如果账户和密码输入错误3次将被锁定无法登录）*/
+
+    /*2）输入1个同学的成绩，60-70为D，70-80为C ，80-90为B，90-100为A 不及格-60为E 最后输出这个同学到底是哪个分段（画流程图并代码实现）*/
+    var score = prompt("请输入某同学的成绩");
+    if(score <60){
+        document.write("<br> E");
+    }else if(score >= 60&& score<70){
+        document.write("<br> D");
+    }else if(score >= 70&& score<80){
+        document.write("<br> C");
+    }else if(score >= 80&& score<90){
+        document.write("<br> B");
+    }else if(score >= 90&& score <=100){
+        document.write("<br> A");
+    }
+    /*3）输入三个数,找出最大数（画流程图并代码实现)*/
+    var number1 =parseInt(prompt("请输入第一个数"));
+    var number2 =parseInt(prompt("请输入第二个数"));
+    var number3 =parseInt(prompt("请输入第三个数"));
+    var max,mid,min;
+    if(number1>number2&&number1>number3){
+        max = number1;
+        if(number2>number3){
+            mid = number2;
+            min = number3;
+        }else{
+            mid = number3;
+            min = number2;
+        }
+    }else if(number2>number1&&number2>number3){
+        max = number2;
+        if(number1>number3){
+            mid = number1;
+            min = number3;
+        }else{
+            mid = number3;
+            min = number1;
+        }
+    }else if(number3>number1&&number3>number2){
+        max = number3;
+        if(number2>number1){
+            mid = number2;
+            min = number1;
+        }else {
+            mid = number1;
+            min = number2;
+        }
+    }
+    document.write("<br>"+max+">"+mid+">"+min);
+
+    /*day2*/
+   /* 1.用户户输入整数。
+    如果输入的是1～6 的整数，则程序输出:your number is in 1～6.  c=（用户输入的数）
+    如果输入的是其它数字，输出:Your number is too large. c=（用户输入的数）*/
+    var numInput =parseInt(prompt("请输入一个整数")) ;
+    if(numInput>0 &&numInput<=6){
+        document.write("<br> your number is in 1-6. c="+numInput);
+    }else{
+        document.write("<br> your number is too large. c="+numInput);
+    }
+    /*2.输入a ,b,c 三个个位数（0-9）之间，组成一个最大的三位数*/
+
+   /* 3、判定2000-2500年中是闰年的年，输出闰年的条件是：
+    (1).能被4整除，但同时不能被100整除的年份都是闰年
+    (2).能被400整除的年份是闰年
+    其它情况都不是闰年*/
+
+    /*4、编写代码:运输公司对用户计算运费.路程越远每公里运费越低。
+    每公里每吨货物的基本运费为10,货物重为w,距离为s,折扣为d,
+        则总运费f的计算公式为：f=10*w*s*(1-d)
+    s<250km        没有折扣
+    250<=s<500     2%折扣
+    500<=s<1000    5%折扣
+    1000<=s<2000   8%折扣
+    2000<=s<3000   10%折扣
+    30
+    00<=s        15%折扣*/
+
+   /* 作业1.模拟自动饮料机
+
+    要求：
+
+    1.当输入0时，模拟自动饮料机停止运行
+
+    2.自动饮料机运行的过程中，当输入1-5时候给出对应的饮料(1.可口可乐 2.雪碧 3.鲜橙多 4.冰红茶 5.矿泉水)
+
+    输入其他值的时候给出非法操作提示，并提示重新输入*/
+
+
+  /*  作业2：作业7：水仙花数
+
+    例：水仙花数 153=1*1*1+5*5*5+3*3*3
+    输入一个数，判断是不是水仙花数
+*/
+
+   /* 作业3：判断三角形
+
+    根据三角形的三条边长(长、中、短三条边)，来判断三角形类型。
+
+    提示：
+
+    (1) 一个三角形的边应该都为正数
+
+    (2) 一个三角形的边都应该满足三角形条件：两边之和大于第三边
+
+    钝角三角形：任意两边的平方和小于第三边的平方，如：a*a+b*b<c*c
+*/
+
+
+ /*   作业4：按年/月/日的顺序输入一个任意日期，在页面输出：这是这一年的第几天
+
+    如：2016年1月2日 是2016年的第2天，而2016年12月31日则是2016年的第366天（因为闰年会多一天）*/
+</script>
+</body>
+</html>
