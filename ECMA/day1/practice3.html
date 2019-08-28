@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+   /* 3.用三元运算符实现
+    1）小明和妈妈约定，期末考试如果语文数学成绩都是满分100，周末妈妈就带他去游乐园，否则就只有在家改错题*/
+        var chinese=prompt("输入语文成绩");
+        var math=prompt("输入数学成绩");
+        console.log(chinese==100&&math==100 ? "去游乐园":"在家改错题");
+//   chinese==100&&math==100 ? alert("去游乐园"):alert("在家改错题");
+   /* 2）小明考了双百分，妈妈周末带小明去游乐园玩了一天，随后和小明约定，如果明年小明还能拿到双百分并且奥数
+    能够获得华杯赛前90名就带他去迪斯尼乐园，否则就只有后年再努力了*/
+   var chinese=prompt("输入语文成绩");
+   var math=prompt("输入数学成绩");
+    var grede=prompt("输入名次");
+    console.log(chinese==100&&math==100&&grede<90 ? "去迪斯尼乐园":"再努力一年");
+//   console.log(chinese==100&&math==100&&(grede<=90&&grede>=1) ? "去迪斯尼乐园":"再努力一年");
+
+</script>
+
+</body>
+</html>

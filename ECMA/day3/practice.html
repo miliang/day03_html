@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*1.找出100--999里面有多少个水仙花数，分别输出这些水仙花数？*/
+//    var a= parseInt(prompt("输入一个三位数"));
+//    var a=0,sum=0;
+//    for(var i=100;i<=999;i++){
+//        var bw=parseInt((i-i%100)/100);
+//        var sw=parseInt((i-(i%10))/10%10);
+//        var gw=parseInt(i%10);
+//        if(i==bw*bw*bw+sw*sw*sw+gw*gw*gw){
+//            alert(i+"是水仙花数");
+//            a++;
+//            sum=sum+i;
+//        }
+//    }
+//    alert(a);
+    /*2.猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，
+    又多吃了一个第二天早上又将剩下的桃子吃掉一半，又多吃了一个。以后每
+    天早上都吃了前一天剩下的一半零一个。到第10天早上想再吃时，见只剩下
+    一个桃子了。求第一天共摘了多少。*/
+    //第10天有1个第九天有（1+1）*2个
+//    var day=10;//天数
+//    var total=1;//数量
+//    for(i=9;i>=1;i--){//i为吃桃子的天数
+//        total=(total+1)*2;//这天桃子的数量
+//        day--;//天数减少
+//        document.write("第"+day+"天,有桃子"+total+"个"+"<br/>");
+//    }
+//    3.题目：有一分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前20项之和。
+//    var a=2;//a为分子
+//    var b=1;//b为分母
+//    var sum=0;//和
+//    var c=0;//下一个分子
+//    for(var i=1;i<=20;i++){
+//        sum+=a/b;//和=分子/分母
+//        c=a+b;//c=上一个分母加上分子的值
+//        b=a;//将上一个分子的值赋给分母
+//        a=c;//将上一个分子的值赋给分母
+//    }
+//    document.write("和为："+sum);
+    var fenzi=2;
+    var fenmu=1;
+    var sum=0;
+    var temp;
+    for(var i=1;i<=20;i++){
+        sum=sum+(fenzi/fenmu);
+        temp=fenzi;
+        fenzi=fenmu+fenzi;
+        fenmu=temp;
+    }
+    document.write(sum);
+
+   /* 4.小球从100米掉落，弹起到50米，然后再掉落，弹到25米，弹10次以后，小球经过
+    的路径是多少米(截止第10次弹地6
+    var a=100;//反弹的距离
+    var b=0;
+    var sum=0;
+    for(var i=1;i<=10;i++){
+        sum+=a+b;
+        a=a/2;
+        b=a;
+    }
+   document.write(sum);*/
+    /*5.有一队兵，他想知道有多少人，便让士兵排队报数：按从1至5报数，最末一个士兵报的数为1；
+    按从1至6报数，最末一个士兵报的数为5；按从1至7报数，最末一个士兵报的数为4；最后再按从1
+    至11报数，最末一个士兵报的数为10。编程求韩信至少有多少兵？*/
+//    var n;//人数
+//    for(n=1;;n++){
+//            if(n%5==1&&n%6==5&&n%7==4&&n%11==10){
+//                break;
+//            }
+//        }
+//        document.write(n);
+//    var  n=1;
+//    while(n%5!=1||n%6!=5||n%7!=4||n%11!=10){
+//        n++;
+//    }document.write(n);
+
+
+</script>
+</body>
+</html>

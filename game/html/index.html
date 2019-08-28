@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css"/>
+
+</head>
+<body>
+<!--显示页面-->
+    <div id="main">
+        <!--方向键的图片-->
+        <div id="direction">
+            <img src="../images/help/Help.png" alt=""/>
+        </div>
+        <!--说明-->
+        <div class="space">
+            <img src="../images/help/Help1.png" alt=""/>
+            <p><span>长按</span>空格键攻击！</p>
+        </div>
+        <div class="space h">
+        <img src="../images/help/Help2.png" alt=""/>
+        <p>伤害有<span>延迟</span>！</p>
+    </div>
+        <div id="boom">
+            <p>开局送三个，且行且<span>珍惜</span></p>
+            <img src="../images/help/boom.gif" alt=""/>
+            <p>一个格子为一个大招</p>
+        </div>
+        <div id="exp">
+            <img src="../images/help/exp.gif" alt=""/>
+            <span>此乃<span>经验瓶</span>经验满了</span>
+            <p>后，宝贝龙会<span>进化</span>，
+                终极状态会有<span>龙卷风</span>等你<span>探索</span>！</p>
+        </div>
+        <div id="time"><span>游戏时间</span>为<span>90</span>秒哦！</div>
+        <!--开始按钮-->
+        <div id="btn" onclick="turn()" onmouseover="myMouse()">
+            <img src="../images/start.gif" alt=""/>
+        </div>
+        <!--返回按钮-->
+        <div id="img" onclick="display()" onmouseover="mouseMove()">
+            <img src="../images/ui/back.gif" alt=""/>
+        </div>
+        <!--暂停或离开游戏-->
+        <div id="last" onclick="myGame()"><!--有问题-->
+            <p>游戏暂停中，</p>
+            <p>确认要离开？</p>
+            <span>挑战的分数将会<span>丢失</span>!</span>
+            <img src="../images/ui/tipY.gif" alt="" onmouseover="pauseMove()" onclick="myConfirm()"/>
+            <img src="../images/ui/tipN.gif" alt="" onmouseover="pauseMove1()" onclick="myClose()"/>
+        </div>
+        <!--游戏时间-->
+        <div id="myTime" onclick="gameTime()">
+            <img src="" alt=""/>
+            <img src="../images/num/d.png" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

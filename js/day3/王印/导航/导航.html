@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="myFont/iconfont.css">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: #2f2e42;
+        }
+        nav{
+            margin-left:50px;
+            margin-top:50px;
+        }
+        nav>ul>li:nth-of-type(1){
+            border-radius:5px 5px 0 0;
+        }
+        nav>ul>li:nth-of-type(4){
+            border-radius:0 0 5px 5px;
+        }
+        nav>ul>li{
+            padding-left: 10px;
+            list-style:none;
+            font-family:"iconfont";
+            color:rgb(90,90,90);
+            border-bottom:1px solid grey;
+            width:350px;
+            height:46px;
+            line-height:46px;
+            overflow: hidden;
+            background-color:white;
+        }
+        nav>ul>li>ul>li{
+            margin-left:-10px;
+            padding-left: 30px;
+            list-style:none;
+            color:white;
+            width:330px;
+            height:46px;
+            line-height:46px;
+            border-bottom:1px solid #5d5c74;
+            background-color: #45445a;
+        }
+        nav>ul>li>ul>li:hover{
+            cursor:pointer;
+            background-color:#b63c4e;
+        }
+        nav>ul>li>span{
+           display:inline-block;
+           float:right;
+           padding-right:10px;
+           font-weight:bolder;
+           font-size:25px;
+        }
+        nav>ul>li:hover{
+            cursor:pointer;
+        }
+        strong{
+            display:inline-block;
+            margin-right:10px;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="menu" onclick="openMenu(this)"><strong>&#xe6f6;</strong>Diseno web <span>&#xe501;</span>
+            <ul id="baby1">
+                <li>Photoshop</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Maquetacion web</li>
+            </ul>
+        </li>
+        <li class="menu" onclick="openMenu(this)"><strong>&#xe60e;</strong>Desarrollo front-end <span>&#xe501;</span>
+            <ul id="baby2">
+                <li>Javascript</li>
+                <li>jQuery</li>
+                <li>Frameworks javascript</li>
+            </ul>
+        </li>
+        <li class="menu"  onclick="openMenu(this)"><strong>&#xe6d7;</strong>Diseno responsive <span>&#xe501;</span>
+            <ul id="baby3">
+                <li>Tablets</li>
+                <li>Dispositivos mobiles</li>
+                <li>Medios de ESCRITORIO</li>
+                <li>Otros dispositivos</li>
+            </ul>
+        </li>
+        <li class="menu"  onclick="openMenu(this)"><strong>&#xe607;</strong>Posicionamiento web <span>&#xe501;</span>
+            <ul id="baby4">
+                <li>Google</li>
+                <li>Bing</li>
+                <li>Yahoo</li>
+                <li>Otros buscadores</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<script>
+    function openMenu(obj) {
+        var tag=1;
+        var li = document.getElementsByClassName("menu");
+        var span=obj.getElementsByTagName("span");
+        if (obj.style.height=="46px"||obj.style.height=="") {
+            tag =0;
+            span[0].style.transform="rotate(0deg)";
+        }
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.height = "46px";
+            li[i].style.color="rgb(90, 90, 90)";
+        }
+        var subMenu = obj.getElementsByTagName("li");
+        if (tag==0) {
+            span[0].style.transform="rotate(180deg)";
+            obj.style.color="red";
+            obj.style.height = (subMenu.length + 1) * 46 + "px";
+        } else if(tag==1){
+            obj.style.height = "46px";
+            span[0].style.transform="rotate(0deg)";
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width,intial-scale=1">-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <title></title>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../css/second.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+       <div class="main">
+           <img src="../images/background.png" alt=""/>
+           <div class="col-lg-3 col-lg-offset-9 form col-md-3 col-md-offset-9 col-sm-3 col-sm-offset-9 col-xs-3 col-xs-offset-9">
+           <h1 class="text-capitalize text-center">giving great</h1>
+
+           <form>
+               <div class="form-group">
+                   <input type="email" class="form-control email" id="exampleInputEmail1" placeholder="Email">
+               </div>
+               <div class="form-group">
+                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+               </div>
+               <button class="btn btn-default text-uppercase button">login</button>
+           </form>
+           <p>Don't have an account?<ins class="text-capitalize ins" onclick="myclick()">sign up</ins></p>
+           </div>
+       </div>
+    </div>
+
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    var p=document.getElementsByTagName("ins")[0];
+   function myclick(){
+       window.location.href="http://baidu.com";
+   }
+
+</script>
+</body>
+</html>

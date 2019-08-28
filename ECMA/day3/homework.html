@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+//    1.序列：1，2，3，5，8，13...。找出第20个数是多少?得出前20个数
+//            x y
+//    之和是多少？
+//    var a=1;
+//    var b=2;
+//    var c,sum=0;
+//    for(var i=1;i<=18;i++){
+//        c=a+b;
+//        sum=Number(sum+c);
+//        a=b;
+//        b=c;
+//        document.write(c+"<br/>");
+//    }
+//    document.write(sum+1+2+"<br/>");
+//    document.write("第二十位数是"+c+"<br/>");
+/*2：用*画等腰三角形
+提示：画空格用&nbsp;或者&ensp;
+如：
+*
+***
+*****
+********/
+//for(j=1;j<=6;j++){
+//    //画空格
+//    for(var k=5;k>=j;k--) {
+//        document.write("&nbsp;");
+//    }
+//    //画星星
+//        for(var i=1;i<=2*j-1;i++){
+//            document.write("*");
+//    }
+//    document.write("<br/>");
+//}
+/*3：计算饭钱
+有30个人，其中有男人、女人和小孩，在一家饭馆里吃饭 共花了500元，每个男人各花30元，
+每个女人各花20元，每个小孩各花10元，问男人、女人和小孩各有几人？*/
+//    var m =0;//男人
+//    var w=0;//女人
+//    var c=0;//孩子
+////
+//    for(m=0;m<=parseInt(500/30);m++){//默认全是男人去吃饭；用500/30；有16人
+//        for(w=0;w<=parseInt(500/20);w++){//默认全是女人去吃饭；用500/20；有25人
+//            for(c=0;c<=parseInt(500/10);c++){//默认全是男人去吃饭；用500/10；人数有50人
+//                if(m+w+c==30&&30*m+20*w+10*c==500){//男人+女人+小孩=30，饭钱相加为500
+//                    document.write("男人有"+m+"女人有"+w+"小孩有"+c+"<br/>")
+//                }
+//            }
+//        }
+//    }
+/*4.将一个正整数分解质因数。例如：输入90,打印出90=2*3*3*5。输入60=2*2*3*5。*/
+//        var n=prompt("请输入一个正整数");
+//    var k=2;
+//    while(k<=n) {
+//        if (n==k) {
+//            break;
+//            document.write(n);
+//        }else if(n%k==0){
+//            document.write(k);
+//            n=n/k;
+//        }else{
+//            k++;
+//        }
+//    }
+
+
+//5.输入2个日期 （年月日），计算两个日期相差多少天？
+    var year1=document.write("请输入第一个年份");
+    var year2=document.write("请输入第二个年份");
+
+
+</script>
+</body>
+</html>

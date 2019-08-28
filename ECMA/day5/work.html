@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+//        1.猜数字游戏，有一个0-100随机数 玩家有5次输入的机会猜，
+//
+//        每次猜一次，都要将结果告诉玩家是小了，还是大了
+//
+//        如果在5次机会内猜中，输出“聪明”，程序结束
+//
+//        如果5次机会用完 程序直接结束。
+       /* var ran=parseInt(Math.random()*101);
+        for(var i=0;i<5;i++){
+            var guess=prompt("猜猜随机数");
+            if(guess==ran){
+                alert("你真棒，猜对了，随机数是："+ran);
+                break;
+            }else if(guess>ran){
+                alert("这是第"+(i+1)+"次，您猜的数字是："+guess+"大了");
+            }else if(guess<ran){
+                alert("这是第"+(i+1)+"次，您猜的数字是："+guess+"小了");
+            }
+            console.log(i+1);
+        }
+        document.write("Game over！正确数字是："+ran);*/
+        function guress(no,guess){
+//            var no=parseInt(Math.random()*101);
+            for(var i=1;i<5;i++){
+//
+                if(guess==no){
+                    alert("你猜对了，随机数是："+no);
+                    break;
+                }else if(guess>no){
+                    alert("这是第"+i+"次，你输入的是："+guess+"大了");
+                }else if(guess<no){
+                    alert("这是第"+i+"次，你输入的是："+guess+"小了");
+                }
+                console.log(i+1);
+                guess=prompt("猜猜随机数");
+            }
+            document.write("Game over！正确数字是："+no);
+        }
+        guress(parseInt(Math.random()*101),prompt("猜猜随机数"));
+
+    </script>
+</body>
+</html>

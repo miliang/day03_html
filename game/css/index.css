@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#main{
+    /*outline: 1px solid green;*/
+    width: 1345px;
+    height: 700px; ;
+    background-image: url("../images/readyBg.jpg");
+    background-position: bottom center;
+}
+/*方向键*/
+#direction{
+    padding:90px 0 0 145px;
+}
+/*空格键和伤害延迟*/
+.space{
+    position: relative;
+    margin: 10px 0 0 145px;
+}
+p{
+    font-weight: 500;
+}
+p>span{
+    color: red;
+    font-weight: bolder;
+}
+.space>p{
+    position: absolute;
+    margin-left: 10px;
+    display: inline-block;
+}
+.h{
+    margin-top: 0px;
+}
+/*开局送三个*/
+#boom{
+    margin: -20px 0 0 145px;
+    position: relative;
+}
+#boom>img{
+    margin-top: -15px;
+}
+#boom>p:nth-of-type(2){
+    position: absolute;
+    display: inline-block;
+    margin-top: -5px;
+}
+/*经验瓶*/
+#exp{
+    position: relative;
+    margin: -7px 0 0 145px;
+}
+#exp>img{
+    margin-top: 2px;
+}
+#exp>span{
+    position: absolute;
+    top: 10px;
+}
+#exp>span>span{
+    color: red;
+    font-weight: bolder;
+}
+#exp>p{
+    margin-top: -10px;
+    width: 200px;
+}
+/*时间*/
+#time{
+    margin: -20px 0 0 145px;
+}
+#time>span{
+    color: red;
+    font-weight: bolder;
+}
+#time>span:nth-of-type(2){
+    font-size: 32px;
+}
+/*开始游戏*/
+#btn{
+    margin: 25px  0 0 300px;
+}
+/*返回按钮*/
+#img{
+    padding-top: 10px;
+    visibility: hidden;
+}
+/*暂停或离开游戏*/
+#last{
+    width: 217px;
+    height: 196px;
+    background-image: url("../images/ui/tipBg.png");
+    display: none;
+}
+#last p{
+    width: 217px;
+    height: 30px;
+    font-size: 24px;
+    padding: 15px 0 0 30px;
+}
+#last>p:nth-of-type(2){
+    margin-top: -40px;
+}
+#last>span{
+    width: 217px;
+    display: block;
+    font-size: 15px;
+    margin: -10px 0 0 30px;
+}
+#last>span>span{
+    color: red;
+    font-weight: bold;
+}
+#last img{
+    margin: 10px 0 0 20px;
+}
+#last img:hover{
+    outline: 1px solid red;
+}
+/*游戏时间*/
+#myTime{
+    position: absolute;
+    width: 240px;
+    height: 60px;
+    margin: -30px 0 0 650px;
+    visibility: hidden;
+}

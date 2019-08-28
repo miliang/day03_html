@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*header{*/
+    /*width: 100%;*/
+    /*height: 600px;*/
+/*}*/
+/*.video{*/
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*.logo{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 565px;*/
+    /*width: 400px;*/
+    /*height: 150px;*/
+    /*background: white;*/
+    /*text-align: center;*/
+    /*padding-top: 35px;*/
+/*}*/
+/*---------------------------*/
+/*.logo img{*/
+    /*width: 100%;*/
+    /*height: ;*/
+/*}*/
+/*±³¾°Í¼*/
+#bg{
+    width: 100%;
+    height: 1000px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    outline: 1px solid red;
+}
+header{
+    width: 100%;
+    height: 600px;
+}
+header video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 0;
+    left: 565px;
+    width: 400px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    opacity: .75;
+}
+.logo img{
+    margin:20px 0 0 20px;
+}
+.logo:hover{
+    opacity: 1;
+}
+/*ÍøÒ³ÄÚÈÝ*/
+.father{
+    height: 120px;
+}
+.big{
+    width: 1530px;
+    height: 120px;
+    background-color: white;
+}
+.big>ul{
+    width: 1400px;
+    height: 120px;
+    background-color: white;
+    /*outline: 1px solid lightgreen;*/
+    margin-left:30px;
+}
+li{
+    list-style: none;
+}
+.myLi{
+    list-style: none;
+    float: left;
+    width: 130px;
+    height: 120px;
+    /*outline: 1px solid red;*/
+    text-align: center;
+    line-height: 120px;
+    font-size: 20px;
+    color: grey;
+}
+.myLi:nth-child(2){
+    width: 190px;
+}
+.myLi:last-child{
+    font-size: 40px;
+    color: #1172ae;
+}
+.myLi:hover{
+    cursor: pointer;
+    background-color: rgba(204, 204, 204, 0.57);
+}
+.myLi:last-child:hover{
+    cursor: alias ;
+    background-color: white;
+}
+.myLi ul{
+    width: 210px;
+    height: 360px;
+    outline: 1px solid #ee5a86;
+    margin-top: -480px;
+    visibility: hidden;
+}
+.myLi:hover ul{
+    transform: rotateX(180deg);
+    bottom: 100%;
+}
+.myLi ul li{
+    /*width: 210px;*/
+    /*padding-top: 0px;*/
+    clear: both;
+    height: 40px;
+    line-height: 40px;
+    outline: 1px solid lightgreen;
+}
+.myLi:hover li{
+    transform: rotateX(180deg);
+}
+.father{
+    width: 1530px;
+    height: 500px;
+    background-color: white;
+    outline: 1px solid lightcoral;
+}
+.subMe img{
+
+}
+.k{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+/*Ò³½Å*/
+footer{
+    height: 500px;
+    outline: 1px solid lawngreen;
+}

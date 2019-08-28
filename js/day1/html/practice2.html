@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: #00274e;
+            color: white;
+            height:700px;
+        }
+        #p{
+            text-align: center;
+        }
+        #display{
+            height: 150px;
+            width: 500px;
+            margin: 10px auto;
+            background-color: white;
+        }
+        #display div{
+            float: left;
+            margin: 5px;
+            height: 30px;
+            width: 150px;
+            /*color: white;*/
+            background-color: green;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        button{
+            background-color: #f25d4d;
+            border: none;
+            height: 25px;
+            color: white;
+        }
+        #clear{
+            width: 140px;
+            margin-left: 425px;
+        }
+        .area{
+            height: 40px;
+            width: 400px;
+            /*outline: 1px solid red;*/
+            margin-left: 425px;
+            margin-top: 10px;
+           line-height: 40px;
+        }
+        .button{
+            width: 80px;
+        }
+        #join{
+            margin-left: 120px;
+        }
+        #jane{
+            margin-left: 117px;
+        }
+        #dan{
+            margin-left: 120px;
+        }
+        #danielle{
+            margin-left: 90px;
+        }
+        #mike{
+            margin-left: 114px;
+        }
+        #leah{
+            margin-left: 117px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p id="p">单击下面的“添加”按钮，添加标签</p>
+    <div id="display"></div>
+    <button id="clear" onclick="clearAll()">清除全部</button>
+    <div class="area">
+        <span class="span">Join Doe</span>
+        <button class="button" id="join" onclick="add()">添加</button>
+    </div>
+    <div class="area">
+        <span class="span">Jane Doe</span>
+        <button class="button" id="jane" onclick="add1()">添加</button>
+    </div>
+    <div class="area">
+        <span class="span">Dan Doe</span>
+        <button class="button" id="dan" onclick="add2()">添加</button>
+    </div>
+    <div class="area">
+        <span class="span">Danielle Doe</span>
+        <button class="button" id="danielle" onclick="add3()">添加</button>
+    </div>
+    <div class="area">
+        <span class="span">Mike Doe</span>
+        <button class="button" id="mike" onclick="add4()">添加</button>
+    </div>
+    <div class="area">
+        <span class="span">Leah Doe</span>
+        <button class="button" id="leah" onclick="add5()">添加</button>
+    </div>
+</header>
+<script>
+    var div1=document.getElementById("display");
+    console.log(div1);
+    var p=document.getElementsByClassName("span");
+    var myClass=document.getElementsByClassName("span");
+    function add(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("Join Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+//        span.onclick(remove());
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function add1(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("Jane Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function add2(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("Dan Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function add3(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("Danielle Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function add4(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("Mike Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function add5(){
+        var div=document.createElement("div");
+        var d=document.createTextNode("leah Doe");
+        var span = document.createElement("span");
+        span.setAttribute("onclick","remove(this)");
+        var text = document.createTextNode("×");
+        span.appendChild(text);
+        div.appendChild(d);
+        div.appendChild(span);
+        div1.appendChild(div);
+    }
+    function remove(divspan){
+        var divxiao = divspan.parentNode;
+        var div=document.getElementById("display");
+        div.removeChild(divxiao);
+    }
+    function clearAll(){
+//        var clear=document.getElementById("clear");
+        var div=document.getElementById("display");
+//        var divs = div.childNodes;
+        div.innerHTML=null;
+    }
+</script>
+</body>
+</html>

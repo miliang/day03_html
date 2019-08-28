@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-family:"宋体";
+}
+body{
+    background-color: #00a9e3;
+}
+p{
+    font-size: 2.5rem;
+}
+.form{
+    float: left;
+}
+.fa-times{
+    font-size: 400px;
+}
+/*按钮背景色根据按钮种类来定*/
+.ourBtn{
+    height: 1.8em;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.8em;
+}

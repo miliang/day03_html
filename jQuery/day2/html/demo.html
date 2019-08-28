@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../font/font-awesome.css"/>
+</head>
+<body>
+    <div id="main">
+        <div id="banner"></div>
+        <!--banner下的文字-->
+        <div id="text">
+            <img src="../img/ic_l/txt_1.png" alt=""/>
+            <button>查看详情</button>
+        </div>
+        <!--导航-->
+        <nav id="nav">
+            <div id="icon" onmousemove="myClick()">
+                <i class="icon-reorder reorder"></i>
+                <span>更多</span>
+            </div>
+            <ul>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    jquery
+                </li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    赚钱宝
+                </li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    新闻动态</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    人力资源</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    投资关系</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    关于jquery</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle "></i>-->
+                    联系我们</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    关于jQuery</li>
+                <li onmousemove="disCir(this)">
+                    <!--<i class="icon-circle circle"></i>-->
+                    公司简介</li>
+            </ul>
+        </nav>
+        <div id="icons">
+            <img src="../img/icon/ic_spr_01.gif" alt=""/>
+            <img src="../img/icon/ic_spr_02.gif" alt=""/>
+            <img src="../img/icon/ic_spr_03.gif" alt=""/>
+            <img src="../img/icon/ic_spr_04.gif" alt=""/>
+            <img src="../img/icon/ic_spr_05.gif" alt=""/>
+            <hr color="grey" width="373px"/>
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+        var bg=["../img/bg_shoulei.jpg","../img/bg_xnet.jpg","../img/bg_member.jpg","../img/bg_xkn.jpg","../img/bg_xav.jpg"];
+        var index=0;
+        var banner=$("#banner");
+        banner.get(0).style.backgroundImage="url("+bg[0]+")";
+        var time=setInterval(dis,2000);
+        function dis(){
+            index++;
+            if(index==bg.length){
+                index=0;
+            }
+            banner.get(0).style.backgroundImage="url("+bg[index]+")";
+        }
+//        var img=$("#icons").get(0).getElementsByTagName("img");
+//        $(img).click(function(){
+//            img[0].src="../img/icon/ic_spr_011.gif";
+//        },function(){
+//            img[1].src="../img/icon/ic_spr_022.gif";
+//        }, function () {
+//            img[2].src="../img/icon/ic_spr_033.gif";
+//        },function(){
+//            img[3].src="../img/icon/ic_spr_044.gif";
+//        }, function () {
+//            img[4].src="../img/icon/ic_spr_055.gif";
+//        })
+//        var nav=document.getElementById("nav");
+//        var ul=nav.getElementsByTagName("ul")[0];
+//        var div=document.getElementById("icon");
+//        var span=div.getElementsByTagName("span")[0];
+//        console.log(span);
+//       function myClick(){
+//           nav.onmouseover= function () {
+//               nav.style.backgroundColor="rgba(0, 0, 0, 0.45)";
+//               ul.style.visibility="visible";
+//           };
+//           nav.onmouseout= function () {
+//               nav.style.backgroundColor="";
+//               ul.style.visibility="hidden";
+//           }
+//       }
+//        var divText=document.getElementById("text");
+//        var divImg=divText.getElementsByTagName("img")[0];
+//        var btn=divText.getElementsByTagName("button")[0];
+////        divText.innerHTML="<img src='../img/ic_l/txt_2.png'/>"
+//        $("#banner").click(function () {
+//            $("#text").animate({
+//                "height":"150px"
+//            },function(){
+//                $("#text").css("display","block");
+//            })
+//        });
+//        function disCir(obj){
+//            var ul=obj.parentNode;
+//            var li=nav.getElementsByTagName("i");
+//            for(var u=0;u<li.length;u++){
+//                li[u].style.display="inline-block";
+////
+//            }var myLi=nav.getElementsByTagName("li");
+
+//        }
+
+
+    </script>
+</body>
+</html>

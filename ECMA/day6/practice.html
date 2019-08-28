@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*练习:写一个函数:传入年月日时分秒
+         如果没有传入的情况下，默认使用系统的时间
+         * 要以
+         * XXXX年XX月XX日 HH时MM分SS秒
+         * 返回给调用者*/
+       /* var date;
+        var y=prompt("请输入年份");
+        var mon=prompt("请输入月份");
+        var d=prompt("请输入日期");
+        var h=prompt("请输入小时数");
+        var min=prompt("请输入分钟数");
+        var sec=prompt("请输入秒数");
+        function  data(year,month,day,hour,minute,second){
+            if(year==""&&month==""&&day==""&&hour==""&&minute==""&&second==""){
+                date=new Date();
+                console.log(date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSeconds()+"秒");
+            }else{
+                date=new Date(year,month,day,hour,minute,second);
+                console.log(date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日"+date.getHours()+"时"+date.getMinutes()+"分"+date.getSeconds()+"秒");
+            }
+            return date;
+        }
+        var result=data(y,mon,d,h,min,sec);
+        console.log(result);
+*/
+        var str="abcdda/addn";
+
+        function mySpice(a,b) {
+            var newArray = [];
+            var temp = "";
+//        var  r=[];
+            for (var i = 0; i < b.length; i++) {
+
+//            if(a==b.charAt(i)){
+//                r.push(i);
+//                console.log(str.indexOf("a")+"<br/>");
+//            }
+
+                if (a == b.charAt(i)) {
+                    str.substring(i,i);
+                    if (temp) {
+                        newArray.push(temp)
+                    }
+//                    newArray.push("a");
+                    temp = "a";
+                } else {
+                    temp += b.charAt(i);
+                }
+
+            }
+            newArray.push(temp);
+            return  newArray;
+        }
+        var result=mySpice("a",str);
+        console.log(result);
+
+       /* ATM机*/
+        var number=prompt("请输入账号：");
+        var pass=prompt("请输入密码");
+        var nArray=[123456789545132,135792468101112,131452052521036];
+        var pArray=[123456,135794.246879];
+//        var myArray=[];
+        var i=1;
+        function login(n,p) {
+                for(var k=0;k<nArray.length;k++){
+                    for(var j=0;j<pArray.length;j++){
+                        if (n == nArray[k]&&p==pArray[j]) {
+                            alert("登录成功");
+                            alert(n,p);
+                            break;
+                        }else if(n==nArray[k]&&p!=pArray[j]){
+                            alert("密码错误");
+                            if(i<=2){
+                                pass=prompt("请重新输入密码");
+                            }else{
+                                alert("退出程序");
+                            }
+//                            break;
+                        }else if(n!=nArray[k]){
+                            alert("账号输入有误");
+                            if(i<=2){
+                                number=prompt("请重新输入账号：");
+                            }else{
+                                alert("退出程序");
+                            }
+                        }
+
+                                }
+                    break;
+//                    }
+            if(n == nArray[k]&&p==pArray[j]){
+                alert("请选择下一步：");
+                main();
+            }else{
+                alert("退出程序");
+            }
+                }
+
+        }
+        login(number,pass);
+        function main(a,b,c,d,e){
+            var choose=prompt("请选择? 1.存款 2.取款 3.转账 4.查询余额 5.退出");
+            if(choose==1){
+               putM();
+            }else if(choose==2){
+                getM();
+            }else if(choose==3){
+                turnM();
+            }else if(choose==4){
+                readM();
+            }else if(choose==5){
+                exit();
+            }
+        }
+        main("存款","取款","转账","查询余额","退出");
+        function  putM(){
+            var money=0;
+            var put=parseInt(prompt("请输入存入金额"));
+            if(put>10000){
+                alert("请输入少于10000的数字");
+            }else{
+                put=Number(put);
+                money+=put;
+                money=Number(money);
+                document.write("余额有"+money);
+                document.write("<br/>");
+                money=Number(money);
+            }
+            return money;
+        }
+//        putM();
+        function  getM(){
+            var mon=200;
+            var get=parseInt(prompt("请输入要取的金额"));
+            if(get>mon){
+                alert("操作有误，请输入少于10000");
+            }else{
+                mon=mon-get;
+                document.write("余额还有"+mon);
+                document.write("<br/>");
+            }
+            return mon;
+        }
+//        getM();
+        function turnM(){
+            var money1=500;
+            var c=0;
+            var turn=parseInt(prompt("请输入要转出的金额"));
+            if(turn>money1){
+                alert("操作有误");
+            }else{
+                c=money1-turn;
+                document.write("余额还有"+c);
+                document.write("<br/>");
+            }
+            return c;
+        }
+//        turnM();
+        function readM(){
+            var money2=500;
+            document.write("账户里有"+money2);
+            document.write("<br/>");
+        }
+        function exit(){
+            document.write("退出系统");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    width: 800px;
+    height: 610px;
+    background-color: rgba(71, 255, 235, 0.13);
+    margin: 15px auto;
+    border-top: 1px solid #CCCCCC;
+}
+.main>img{
+margin: 10px;
+}
+.content{
+    margin: 10px 0 0 0px;
+    width: 680px;
+    height: 600px;
+    float: right;
+    outline: 1px solid red;
+}
+p{
+    font-size: 14px;
+}
+p span{
+    color:#336699 ;
+}
+.content>img{
+    margin-top: 5px;
+    width: 200px;
+}
+span{
+    font-size: 14px;
+}
+.icon{
+    width: 680px;
+    height: 30px;
+    outline: 1px solid #ee5a86;
+}
+.time{
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+ #img{
+    margin: 0 0 0 10px;
+     vertical-align: middle;
+}
+.time span{
+    clear: both;
+    text-align: center;
+    margin:0 0 0 5px;
+}
+.good{
+    float: right;
+    margin-right: 10px;
+}
+.good>span{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #336699;
+}
+.p{
+    width: 680px;
+    height: 30px;
+    background-color: #f7f7f7;
+    line-height: 30px;
+}
+.p>img{
+    float: left;
+    margin: 6px 5px 0 5px;
+}
+.p>p{
+    float: left;
+    width: 600px;
+    height: 30px;
+}
+.appraise{
+    margin: 2px 0 2px 0;
+    width: 680px;
+    height: 60px;
+    outline: 1px solid green;
+}
+.appraise>img{
+    float: left;
+    width: 50px;
+    margin: 5px;
+}
+.appraise>p{
+    height: 20px;
+    padding: 5px 0 0 70px;
+    outline: 1px solid gold;
+}
+.appraise>span{
+    padding: 5px 0 0 10px;
+}

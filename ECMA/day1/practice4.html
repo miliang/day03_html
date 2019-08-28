@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*2）输入1个同学的成绩，60-70为D，70-80为C ，80-90为B，90-100为A 不及格-60为E 最后输出这个同学到底是哪个分段（画流程图并代码实现）*/
+            var score=prompt("请输入成绩");
+            if(score<60){
+                document.write("不及格"+"E");
+            }
+            if(score>=60&&score<=70){
+                document.write("D");
+            }
+            if(score>70&&score<=80){
+                document.write("C");
+            }
+            if(score>80&&score<=90){
+                document.write("B");
+            }
+            if(score>90&&score==100){
+                document.write("A");
+            }
+        /*var chengji=window.prompt("请输入您的成绩）；
+        if（chengji<60){
+        console.log("R");
+        }else if(cheng>=60&&chengji<70){
+        console.log("D");
+        }else if(chengji>=70&&chengji<80){
+        console.log("C");
+        }else if(chengji>=80&&chengji<90){
+         console.log("B");
+         }else{
+         console.log("A");
+         }
+        * */
+        /*3）输入三个数,找出最大数（画流程图并代码实现)*/
+            var a=prompt("请输入A的值");   var b=prompt("请输入B的值");   var c=prompt("请输入C的值");
+            if(a>b){
+                if(a>c){
+                    alert("最大的数是"+a);
+                }else{
+                    alert("最大的数是"+c);
+                }
+            }else{
+                if(b>c){
+                    alert("最大的数是"+b);
+                }else{
+                    alert("最大的数是"+c);
+                }
+            }
+        /*var no1=window.prompt("输入第一个数");
+        * var no12=window.prompt("输入第二个数");
+        * var no1=window.prompt("输入第三个数");
+        * var max;
+        * if(no1>no2&&no1>no3){
+        * max=no1;}else if(no2>no1&&no2>no3){
+        * max=no2;}else{
+        * max=no3;
+        * }*/
+    </script>
+</body>
+</html>

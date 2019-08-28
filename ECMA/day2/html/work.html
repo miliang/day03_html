@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*作业1.模拟自动饮料机
+    要求：
+    1.当输入0时，模拟自动饮料机停止运行
+    2.自动饮料机运行的过程中，当输入1-5时候给出对应的饮料(1.可口可乐 2.雪碧 3.鲜橙多 4.冰红茶 5.矿泉水)
+    输入其他值的时候给出非法操作提示，并提示重新输入
+*/
+//    var w=window.prompt("请按下按钮1-5选择您需要的饮料：1.可口可乐 2.雪碧 3.鲜橙多 4.冰红茶 5.矿泉水);
+//    if(w==0){
+//        document.write("停止运行");
+//    }else{
+//        document.write("正常运行");
+//    }
+//    var num=window.prompt("请输入1-5的数字");
+//    if(num>=1&&num<=5){
+//       switch (num)
+//       {
+//           case "1":alert("可口可乐");
+//               break;
+//           case "2":alert("雪碧");
+//               break;
+//           case "3":alert("鲜橙多");
+//               break;
+//           case "4":alert("冰红茶");
+//               break;
+//           default :alert("矿泉水");
+//       }
+//    }else{
+//        document.write("非法操作，请重新输入")
+//    }
+//
+//    /*作业2：作业7：水仙花数
+//    例：水仙花数 153=1*1*1+5*5*5+3*3*3
+//    输入一个数，判断是不是水仙花数*/
+////    var no1=window.prompt("输入花数");
+//    var no2=window.prompt("输入花数");
+//    var no3=window.prompt("输入花数");
+//    if((no1>=0&&no1<=9)&&(no2>=0&&no2<=9)&&(no3>=0&&no3<=9)){
+//        if(no1+no2+no3==no1*no1*no1+no2*no2*no2+no3*no3*no3){
+//            alert(no1+no2+no3);
+//            alert("是水仙花数");
+//        }else{
+//            alert("不是水仙花数");
+//        }
+//    }else{
+//        alert("输入有误");
+//    }
+//var a=parseInt(prompt("请输入一个三位数"));
+//    if(a>=100&&a<=999){
+//   var bw=parseInt(a/100));
+ // var sw=parseInt(a%100)/10);
+    // var gw=parseInt(a%10));
+//    /*作业3：判断三角形
+//    根据三角形的三条边长(长、中、短三条边)，来判断三角形类型。
+//    提示：
+//    (1) 一个三角形的边应该都为正数
+//    (2) 一个三角形的边都应该满足三角形条件：两边之和大于第三边
+//    钝角三角形：任意两边的平方和小于第三边的平方，如：a*a+b*b<c*c*/
+//    var a=window.prompt("请输入三角形的边");
+//    var b=window.prompt("请输入三角形的边");
+//    var c=window.prompt("请输入三角形的边");
+//    if(a>0&&b>0&&c>0){
+//        alert("三角形的边大于零");
+//        if(a+b>c||a+c>b||b+c>a){//两边之和大于第三边
+//            alert("这是一个三角形");
+//            if(a*a+b*b<c*c||a*a+c*c<b*b||c*c+b*b<a*a){//任意两边的平方和小于第三边的平方
+//                alert("这是一个钝角三角形");
+//            }else{
+//                alert("这不是一个钝角三角形");
+//            }
+//        }else{
+//            alert("这不是一个三角形");
+//        }
+//    }else{
+//        alert("三角形的边必须是正数");
+//    }
+
+   /* 作业4：按年/月/日的顺序输入一个任意日期，在页面输出：这是这一年的第几天
+    如：2016年1月2日 是2016年的第2天，而2016年12月31日则是2016年的第366天（因为闰年会多一天）*/
+    var year=window.prompt("请输入年份");
+    var month=parseInt(window.prompt("请输入月份"));
+    var day=parseInt(window.prompt("请输入号数"));
+    if(year%4==0&&year%100!=0||year%400==0){
+        if(month>2){
+            day++;
+        }
+    }
+    /*var year=window.prompt("请输入年份");
+    var month=parseInt(window.prompt("请输入月份"));
+    var day=parseInt(window.prompt("请输入号数"));
+    if(year%4==0&&year%100!=0||year%400==0){
+        document.write(year+"是闰年");
+        if(month>0&&month<=12){
+//            if(month==1||month==3||month==5||month==7||month==8||month==10||month==12) {
+//                alert("输入的天数不能超过31天");
+//            }else if(month==2) {
+//                alert("输入的天数不能超过29天");
+//            }else {
+//                alert("输入的天数不能超过30天");
+//            }
+            switch (month){
+                case 1:alert(year+"年的第"+day+"天");break;
+                case 2:alert(year+"年的第"+(day+31)+"天");break;
+                case 3:alert(year+"年的第"+(day+31+29)+"天");break;
+                case 4:alert(year+"年的第"+(day+31*2+29)+"天");break;
+                case 5:alert(year+"年的第"+(day+31*2+29+30)+"天");break;
+                case 6:alert(year+"年的第"+(day+31*3+29+30)+"天");break;
+                case 7:alert(year+"年的第"+(day+31*3+29+30*2)+"天");break;
+                case 8:alert(year+"年的第"+(day+31*4+29+30*2)+"天");break;
+                case 9:alert(year+"年的第"+(day+31*5+29+30*2)+"天");break;
+                case 10:alert(year+"年的第"+(day+31*5+29+30*3)+"天");break;
+                case 11:alert(year+"年的第"+(day+31*6+29+30*3)+"天");break;
+                default :alert(year+"年的第"+(day+31*6+29+30*4)+"天");
+            }
+        }else{
+            document.write("输入的月份有误");
+        }
+    }else{
+        document.write(year+"不是闰年");
+        if(month>0&&month<=12){
+            switch (month){
+                case 1:alert("输入的天数不能超过31天");break
+                case 3:alert("输入的天数不能超过31天");break
+                case 5:alert("输入的天数不能超过31天");break
+                case 7:alert("输入的天数不能超过31天");break
+                case 8:alert("输入的天数不能超过31天");break
+                case 10:alert("输入的天数不能超过31天");break
+                case 12:alert("输入的天数不能超过31天");break
+                case 2:alert("输入的天数不能超过28天");break
+                default :alert("输入的天数不能超过30天");
+            }
+            switch (month){
+                case 1:alert(year+"年的第"+day+"天");break;
+                case 2:alert(year+"年的第"+(day+31)+"天");break;
+                case 3:alert(year+"年的第"+(day+31+28)+"天");break;
+                case 4:alert(year+"年的第"+(day+31*2+28)+"天");break;
+                case 5:alert(year+"年的第"+(day+31*2+28+30)+"天");break;
+                case 6:alert(year+"年的第"+(day+31*3+28+30)+"天");break;
+                case 7:alert(year+"年的第"+(day+31*3+28+30*2)+"天");break;
+                case 8:alert(year+"年的第"+(day+31*4+28+30*2)+"天");break;
+                case 9:alert(year+"年的第"+(day+31*5+28+30*2)+"天");break;
+                case 10:alert(year+"年的第"+(day+31*5+28+30*3)+"天");break;
+                case 11:alert(year+"年的第"+(day+31*6+28+30*3)+"天");break;
+                default :alert(year+"年的第"+(day+31*6+28+30*4)+"天");
+            }
+        }else{
+            document.write("输入的月份有误");
+        }
+    }*/
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+nav{
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+}
+nav table{
+    width: 100%;
+    background-color: rgba(169, 169, 169, 0.25);
+}
+.tdt{
+    color:cadetblue ;
+    width: 150px;
+}
+.tdtd{
+    width: 80px;
+}
+.td{
+    width: 240px;
+}
+section{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    background-color: rgba(192, 192, 192, 0.35);
+}
+.content{
+    width: 80%;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text,.text1{
+    text-align: left;
+}
+.text2{
+    text-align: center;
+}
+footer{
+    width: 85%;
+    height: 200px;
+    margin: auto;
+    background-color: white;
+    display: table-cell;
+    vertical-align: middle;
+}
+.foot{
+    width: 80%;
+    margin: auto;
+}
+.span{
+    color: cadetblue;
+}
+hr{
+    width:100%;
+    color: rgba(128, 128, 128, 0.54);
+    margin-top: 50px;
+}
+footer img{
+    margin-left: 1000px;
+}
+.img2{
+    margin-left: 1150px;
+}

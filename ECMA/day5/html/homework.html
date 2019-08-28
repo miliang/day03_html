@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+//        1.输入半径，高，求圆柱体的面积，和体积，把体积、面积返回给函数调用者，
+//        然后由调用者输出面积和体积大小.
+//            圆面积：PI*R*R
+//           圆周长：2*PI*R
+/*        function yuan(r,h){
+            s=2*3.14*r*r+2*3.14*r*h;
+            v=(3.14*r*r*h);
+            console.log(s);
+            console.log(v);
+            var array=[s,v];
+    return array;
+    }
+    var result=yuan(prompt("请输入圆柱的半径"),prompt("请输入圆柱的高"));
+    console.log(result);
+    document.write("圆柱的表面积是："+result[0]);
+    document.write("圆柱的体积是："+result[1]);*/
+
+//2.输入一个三位数，判定它是否是水仙花数（输出是否是水仙花数的结果必须由调
+// 用者来输出，不能由函数内部输出）
+//g=n%10;
+//s=parseInt(n/10)%10;
+//b=parseInt(n/100)
+//    var n=parseInt(prompt("输入一个三位数"))
+//        function test(n){
+//            if(n>=100&&n<=999){
+//                var b=parseInt(n/100);
+//                var s=parseInt(n%100)/10;
+//                var g=n%10;
+//
+//                if(b*b*b+s*s*s+g*g*g==n){
+//                    alert(n+"是水仙花数");
+//                } else{
+//                    alert(n+"不是水仙花数");
+//                }
+//                return n;
+//            }
+//        }
+//        var re=test(parseInt(prompt("输入一个三位数")));
+//        console.log(re);
+
+//3.输入三个数（0-9之间） 找出最大数和最小数,然后组成最大的三位数。
+//        function test(a,b,c){
+//            var lager,mid,small;
+//           if(a>=0&&a<=9&&b>=0&&b<=9&&c>=0&&c<=9){
+//               if(a>=b&&a>=c){
+//                   lager=a;
+//                   if(b>c){
+//                       mid=b;
+//                       small=c;
+//                   }else{
+//                       mid=c;
+//                       smallb;
+//                   }
+//               }else if(b>a&&b>c){
+//                   lager=b;
+//                   if(a>c){
+//                       mid=a;
+//                       small=c;
+//                   }else{
+//                       mid=c;
+//                       small=a;
+//                   }
+//               }else if(c>a&&c>b){
+//                   lager=c;
+//                   if(a>b){
+//                       mid=a;
+//                       small=b;
+//                   }else{
+//                       mid=b;
+//                       small=a;
+//                   }
+//               }
+//           }
+//            document.write(lager*100+mid*10+small);
+//        }
+//        var resu=test(parseInt(prompt("输入第一个数")),parseInt(prompt("输入第二个数")),parseInt(prompt("输入第三个数")));
+//        console.log(resu);
+
+/*4.提供一个函数，此函数用来打印由“*”组成的矩形，但是行数和列数，
+
+做为形参，由调用者来给具体的行数和列数，最后由函数打印出对应行数列数大小的矩形*/
+//        function juxing(row,col){
+//            for(var i=1;i<row;i++){
+//                for(var j=1;j<col;j++){
+//                    document.write("*");
+//                }
+//                document.write("<br/>");
+//            }
+//        }
+//        juxing(5,6);
+//        juxing(10,20);
+
+/*5.如4题一样，最后打出等腰三角形*/
+//        function triangle(row){
+//            for(var i=1;i<row;i++){
+//                for(var k=row;k>i;k--){
+//                     document.write("&ensp;");
+//                }
+//                for(u=1;u<=i*2-1;u++){
+//                    document.write("*");
+//                }
+//                document.write("<br/>");
+//            }
+//        }
+//        triangle(9);
+
+//6.输入2个日期 （年月日），计算两个日期相差多少天？(改写成函数，体会重用原则)
+        var lastTotalDate;
+        function Date(year,month,day){
+            var totalDate=0;
+           switch (month){
+               case 1:totalDate=day;break;
+               case 2:totalDate=31+day;break;
+               case 3:totalDate=31+28+day;break;
+               case 4:totalDate=31+28+31+day;break;
+               case 5:totalDate=31+28+31+30+day;break;
+               case 6:totalDate=31+28+31+30+31+day;break;
+               case 7:totalDate=31+28+31+30+31+30+day;break;
+               case 8:totalDate=31+28+31+30+31+30+31+day;break;
+               case 9:totalDate=31+28+31+30+31+30+31+31+day;break;
+               case 10:totalDate=31+28+31+30+31+30+31+31+30+day;break;
+               case 11:totalDate=31+28+31+30+31+30+31+31+30+31+day;break;
+               case 12:totalDate=31+28+31+30+31+30+31+31+30+31+30+day;break;
+           }
+            if(year%100!=0&&year%4==0||year%400==0){
+                if(month>2){
+                    totalDate++;
+                }
+            }
+            return totalDate;
+        }
+        var res=Date(parseInt(prompt("请输入年份")),parseInt(prompt("请输入月份")),parseInt(prompt("请输入日期")));
+        console.log(res);
+        var res1=Date(parseInt(prompt("请输入年份")),parseInt(prompt("请输入月份")),parseInt(prompt("请输入日期")));
+        console.log(res1);
+//
+//7. 写一个函数，有唯一参数接口1个，参数类型为number; 返回值为1，表示是质数；返回值为0，表示不是质数。
+//        function array(n){
+//            var a;
+//            if(n>1){
+//                for(var i=2;i<n;i++){
+//                    if(n%i!=0){
+//                        a=1;
+//                    }else{
+//                        a=0;
+//                        break;
+//                    }
+//                }
+//            }
+//            return a;
+//        }
+//        var sult=array(parseInt(prompt("请输入数字")));
+//        document.write(sult);
+    </script>2
+</body>
+</html>

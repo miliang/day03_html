@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./font/font-awesome.css"/>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(44,45,65);
+        }
+        div{
+            width: 360px;
+            height: 245px;
+            background-color: white;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .pencil,.phone,.code,.globe{
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .phone,.code,.globe{
+            color:#444359 ;
+        }
+        div ul li{
+            list-style: none;
+            width: 360px;
+            height: 60px;
+            line-height: 60px;
+            outline: 1px solid chocolate;
+            color: #b63b4d;
+            border-bottom: 1px solid #cccccc;
+            overflow: hidden;
+        }
+        #div>ul>li{
+            background-color: white;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: #4d4d4d;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        #first{
+            color: #b63b4d;
+        }
+        .icon-chevron-up,.icon-chevron-down{
+           float: right;
+            font-size: 24px;
+            margin: 15px 10px 0 0;
+        }
+        .icon-chevron-down{
+            color:#444359 ;
+        }
+        li>ul>li{
+            background-color: #444359;
+            color:#d9d9d5;
+            border-bottom: 1px solid #cccccc;
+            padding-left: 60px;
+        }
+        li ul li:hover{
+            background-color: #b63b4d;
+            color: white;
+        }
+      div
+    </style>
+</head>
+<body>
+    <div id="div">
+       <ul>
+        <li class="menu" onclick="openMenu(this)">
+            <i class=" icon-pencil pencil"></i>
+            <a id="first" href="#">Diseno web</a>
+            <i class="icon-chevron-up up"></i>
+            <ul>
+                <li>Photoshop</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Maquetacion web</li>
+            </ul>
+        </li>
+        <li class="menu" onclick="openMenu(this)">
+            <i class="icon-code code"></i>
+            <a href="#">Drsarrollo font-end</a>
+            <i class="icon-chevron-down down"></i>
+            <ul>
+                <li>Javascript</li>
+                <li>JQuery</li>
+                <li>Frameworks javascript</li>
+            </ul>
+        </li>
+        <li class="menu" onclick="openMenu(this)">
+            <i class="icon-phone phone"></i>
+            <a href="#">Diseno responsive</a>
+            <i class="icon-chevron-down down"></i>
+            <ul>
+                <li>Tables</li>
+                <li>Dispositivos mobiles</li>
+                <li>Medios de escritirio</li>
+                <li>Otros dispositivos</li>
+            </ul>
+        </li>
+        <li class="menu" onclick="openMenu(this)">
+            <i class="icon-globe globe"></i>
+            <a href="#">Posicionamiento web</a>
+            <i class="icon-chevron-down down"></i>
+            <ul>
+                <li>Google</li>
+                <li>Bing</li>
+                <li>Yahoo</li>
+                <li>Otros buscadores</li>
+            </ul>
+        </li>
+       </ul>
+    </div>
+    <script>
+        var menu=document.getElementsByClassName("menu");
+            function openMenu(obj) {
+                var ul = obj.parentNode;
+                var li = document.getElementsByClassName("menu");
+                var subMenu = obj.getElementsByTagName("li");
+//                console.log(li);
+                if(obj.style.height==""||obj.style.height=="60px"){
+                    for (var i = 0; i < li.length; i++) {
+                        li[i].style.height = "60px";
+                    }
+
+//                    var div1=document.getElementById("div");
+                    obj.style.height = (subMenu.length + 1) * 60 + "px";
+//                    div1.style.height=(subMenu.length) * 60 +240+ "px";
+                }else if( obj.style.height == ((subMenu.length + 1) * 60) + "px"){
+                    obj.style.height="60px";
+
+
+                }
+//                console.log( div1.style.height);
+        }
+    </script>
+</body>
+</html>

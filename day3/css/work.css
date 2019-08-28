@@ -1,0 +1,53 @@
+body{
+    background-color: #191919;
+}
+.sun{
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    border: 1px dashed rgba(255, 255, 255, 0.46);
+}
+.sun .sunn{
+    float: right;
+}
+.sunlight{
+    float: left;
+    font-size: 3em;
+}
+.sun p{
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 16px;
+}
+.sun h3{
+    color: white;
+    text-decoration: underline;
+    font-size: 24px;
+}
+.h1{
+    margin-top: 30px;
+}
+.water{
+    float: left;
+}
+.h2{
+    text-align: right;
+}
+.venus{
+    float: right;
+}
+.h3,.h5,.h7{
+    text-align: left;
+}
+.earth,.jupiter,.uranus{
+    float: left;
+}
+.h4,.h6,.h8{
+    text-align: right;
+}
+.spark,.saturn,.neptune{
+    float: right;
+}

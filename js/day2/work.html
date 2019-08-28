@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./font/font-awesome.css"/>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #div1{
+            width: 1500px;
+            height: 400px;
+            /*outline: 1px solid saddlebrown;*/
+            background-color: #ff702f;
+        }
+        #div1 ul{
+            width: 7500px;
+            height: 330px;
+        }
+        #div1 ul li{
+            list-style: none;
+            width: 1500px;
+            height: 330px;
+            float: left;
+        }
+        #div1 img{
+            margin: auto;
+           margin-left: 200px;
+            /*transition: all .3s linear;*/
+
+        }
+        #bu{
+            position: relative;
+            background-color: #ff702f;
+            height: 55px;
+            top: -60px;
+            margin-left: -240px;
+            width:130px;
+            border-radius: 30px;
+            border: 1px solid white;
+        }
+        #button{
+            position: absolute;
+            top:220px;
+            margin-left: -125px;
+            background-color: white;
+            color: #ff702f;
+            height: 45px;
+            width:120px;
+            border-radius: 25px;
+            border: 1px solid white;
+        }
+        #div2{
+            position: absolute;
+            top: 356px;
+            outline: 1px solid red;
+            text-align: center;
+        }
+        .button1{
+            /*position: absolute;*/
+            width: 150px;
+            height: 45px;
+            text-align: center;
+            /*font-size: 0px;*/
+        }
+        .button1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ul>
+            <li><img id="img1" src="./images/index_slide_con01.png" alt="#"/></li>
+            <li><img id="img2" src="./images/index_slide_con02.png" alt="#"/></li>
+            <li><img id="img3" src="./images/index_slide_con03.png" alt="#"/></li>
+            <li><img id="img4" src="./images/index_slide_con04.png" alt="#"/></li>
+            <li><img id="img5" src="./images/index_slide_con05.png" alt="#"/></li>
+        </ul>
+        <button id="bu"></button>
+        <button id="button">投放申请</button>
+    </div>
+    <div id="div2">
+        <button class="button1" onclick="reMove(1)"><i class="icon-download"></i></button>
+        <button class="button1" onclick="reMove(2)"><i class="icon-tablet"></i></button>
+        <button class="button1" onclick="reMove(3)"><i class="icon-user"></i></button>
+        <button class="button1" onclick="reMove(4)"><i class="icon-desktop"></i></button>
+        <button class="button1" onclick="reMove(5)"><i class="icon-search"></i></button>
+    </div>
+<script>
+
+    function reMove(obj){
+        var div1=document.getElementById("div1");
+        var li=document.getElementsByTagName("li")[0];
+        var images=document.getElementsByTagName("img");
+        var imgUrl = document.getElementById("img1");
+        imgUrl.src="./images/index_slide_con0"+obj+".png";
+        //        console.log(images);
+//        console.log(obj);
+//        var img1,img2;
+/*        var img1=document.getElementById("img1");
+        console.log(img1);
+        var img2=document.getElementById("img2");
+        console.log(img2);
+        li.replaceChild(img2,img1);
+        console.log(li);*/
+//        for(var i=0;i<images.length;i++){
+//            if(img1=images[i]){
+//                console.log(img1);
+//                img2=images[i+1];
+//                console.log(img2);
+//                li.replaceChild(img2,img1);
+//                console.log(li);
+//            }if(img1=images.length){
+//                for(var u=0;u<images.length;u++){
+//                    img2=images[u];
+//                }
+//                console.log(img2);
+//                li.replaceChild(img2,img1);
+//            }
+//        }
+
+    }
+    /*function reMove1(obj){
+        var li=document.getElementsByTagName("li")[0];
+        var img2=document.getElementById("img2");
+        var img3=document.getElementById("img3");
+        console.log(img3);
+        console.log(img2);
+        li.replaceChild(img3,img2);
+        console.log(li);
+    }
+    function reMove2(obj){
+        var li=document.getElementsByTagName("li")[0];
+        var img3=document.getElementById("img3");
+        var img4=document.getElementById("img4");
+        console.log(img3);
+        console.log(img4);
+        li.replaceChild(img4,img3);
+        console.log(li);
+    }
+    function reMove3(obj){
+        var li=document.getElementsByTagName("li")[0];
+        var img4=document.getElementById("img4");
+        var img5=document.getElementById("img5");
+        console.log(img4);
+        console.log(img5);
+        li.replaceChild(img5,img4);
+        console.log(li);
+    }
+    function reMove4(obj){
+        var li=document.getElementsByTagName("li")[0];
+        var img5=document.getElementById("img5");
+        var img1=document.createElement("img");
+        img1.setAttribute("src","./images/index_slide_con1.png");
+        console.log(img1);
+        console.log(img5);
+        li.replaceChild(img1,img5);
+        console.log(li);
+    }*/
+
+</script>
+</body>
+</html>

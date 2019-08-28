@@ -1,0 +1,248 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    margin: auto;
+    width: 1280px;
+    height: 756px;
+    background-image: url("../images/phototime_01.jpg");
+}
+.first{
+    width: 100%;
+    height: 500px;
+}
+#nav{
+    width: 800px;
+    height: 90px;
+    /*border: 1px solid black;*/
+    margin-left: 240px;
+    padding-top: 50px;
+}
+#nav ul{
+    width: 800px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+}
+#nav ul li{
+    list-style: none;
+    width: 150px;
+    height: 90px;
+    line-height: 90px;
+    text-transform: uppercase;
+    font-size: 20px;
+    float: left;
+    color: white;
+}
+#img{
+    padding-top: 10px;
+}
+#text{
+    border: 1px solid white;
+    padding-top: 20px;
+    width: 800px;
+    height: 150px;
+    line-height: 40px;
+    margin: 160px auto 0 auto;
+    text-align: center;
+
+}
+#text h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 40px;
+    padding-top: 0px;
+}
+#text p{
+    color: white;
+    font-size: 16px;
+}
+.input{
+    height: 40px;
+    width:140px;
+    background-color: #16a086;
+    color: white;
+    border-style: none;
+    text-transform: uppercase;
+}
+#icon{
+    height: 30px;
+    width: 800px;
+    margin: 230px auto 0 600px;
+}
+#photo{
+    margin: auto;
+    width: 1280px;
+    height: 494px;
+    background-image: url("../images/phototime_02.jpg");
+}
+#many{
+    width: 300px;
+    height: 270px;
+    padding: 150px 180px 0 180px;
+}
+#many h3{
+    color: #16a086;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+#many p{
+    margin-top: 40px;
+    font-size: 14px;
+}
+#many div input{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+#phone{
+    background-image: url("../images/phototime_03.jpg");
+    width: 1000px;
+    position: relative;
+    top:320px;
+    left: 0px;
+    padding:200px 0 0 0;
+    height: 558px;
+}
+#phone-text{
+    position: relative;
+    width: 400px;
+    height: 360px;
+    margin-left: 330px;
+    bottom: 45px;
+    left: 360px;
+
+}
+#h3{
+    font-size: 20px ;
+}
+#color{
+    width: 1280px;
+    height: 320px;
+    background-color: #f5f6f8;
+    position: relative;
+    right: 0px;
+    top: 70px;
+}
+#color div{
+    height: 330px;
+}
+.pic{
+    /*border: 2px solid #d6205b;*/
+    height: 200px;
+    width: 240px;
+    margin: auto;
+    float: left;
+    margin-left: 125px;
+    margin-top: 60px;
+}
+.pic img{
+    margin-left: 70px;
+}
+.pic h4{
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.pic p{
+    display: inline-block;
+    padding-bottom: 20px;
+    width: 150px;
+    margin-left: 30px;
+}
+.car{
+    width: 376px;
+    padding-top: 30px;
+    margin-left: 20px;
+    float: left;
+}
+.last{
+    width: 1280px;
+    position: relative;
+    top:30px;
+    height: 789px;
+    background-image: url("../images/phototime_12.png");
+}
+.last p{
+    position: relative;
+    top: 400px;
+    text-transform: uppercase;
+    left: 200px;
+   font-size: 30px;
+    color: white;
+    margin-top: 500px;
+}
+#sub{
+    width: 180px;
+    height: 40px;
+    border-style: none;
+    position: relative;
+    top: 400px;
+    left: 200px;
+    background-color: white;
+}
+.p{
+    clear: both;
+    height:788px;
+}
+footer{
+    margin-top: 500px;
+    width: 1280px;
+    height: 400px;
+    margin: auto;
+    /*border: 1px solid blue;*/
+}
+.second{
+    width: 1280px;
+    height: 300px;
+    background-color: #f5f6f8;
+    margin: auto;
+}
+ #h2{
+     padding-top: 60px;
+     text-align: center;
+ }
+ .second div{
+     width: 500px;
+     height: 90px;
+     margin: auto;
+     text-align: center;
+ }
+ .store{
+     width: 150px;
+     height: 40px;
+     background-color:#16a086 ;
+     border-style: none;
+    position: relative;
+     left: 470px;
+     top: 30px;color: white;
+ }
+ #finally{
+     width: 1280px;
+     height: 150px;
+     margin: auto;
+ }
+ #divUl{
+     width: 450px;
+     height: 100px;
+     margin: auto;
+     /*border: 1px solid #ff452a;*/
+     float: left;
+ }
+ #divUl ul{
+    margin-left: 100px;
+ }
+#divUl ul li{
+    list-style: none;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 20px;
+    padding-top: 30px;
+}
+#pp{
+    margin-left: 100px;
+}
+#tp{
+    float: right;
+    margin-right: 120px;
+    margin-top: 30px;
+}

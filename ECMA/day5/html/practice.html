@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        /*1.写一个函数，参数为一个字符，一个字符串，
+        返回这个字符出现在这个字符串的第几个位置，如果没有该字符，则返回-1*/
+//        function math(a,b){
+//            for(var i=0;i<b.length;i++){
+//                if(b.charAt(i)==a){
+//                    return i;
+//                }
+//            }
+//            return -1;
+//        }
+//        var b="Hello World!";
+//        var a=prompt("输入一个字符");
+////        var b=math(prompt("输入一个字符串"));
+//        var d = math(a,b);
+//        document.write(d);
+       /* 老师的代码
+        * 思路：先定义一个字符串然后在方法中传入参数字符和字符串，在调用
+        * 函数时，函数里面有字符和字符串，返回字符在字符串中的位置，如果
+        * 字符不在字符串中就返回-1，如果有就返回字符的位置；定义一个变量
+        * 储存结果，默认为字符不在字符串中；返回储存结果；将输入的字符与
+        * 字符串里的字母一个一个作比较；保证字符的长度为1，使用chaerAt（）
+        * 返回指定位置的字符，当字符串.charAt(i)==字符，则将变量的至改为i的值
+        * */
+/*
+        var str="welcome to cehngdu";
+        var newStr=[];
+         function myStr(a,b){
+           var result=-1;
+          for(var i=0;i<b.length;i++) {
+              if (a == b.charAt(i)) {
+                  result = i;
+//                  break;
+                  newStr.push(i);
+                  console.log(newStr);
+              }
+          }
+           return result;
+         }
+         var myResult=myStr("c",str);
+             console.log(myResult);
+*/
+
+
+//        2.写一个函数，参数为截取字符串的起始位置，截取字符串的结束位置，
+//        要截取的字符串，最后根据函数参数返回对应截取的字符串
+//        var st=prompt("请输入一个字符串");
+//                console.log(st);
+//                var c=prompt("请输入截取的起始位置");
+//                var e=prompt("请输入截取的结束位置");
+//        function str(st,c,e){
+//                var a=st.substr(c,e);
+//                console.log(a);
+////                return a;
+//        }
+//        var aa=str(st,c,e);
+//        document.write(aa);
+//
+        /*老师的代码
+        * 思路：先定义一个字符串，再定义一个函数，函数中包括截取的开始位置和结束位置
+        * 还有字符串，调用函数中也包括截取的开始位置，结束位置，字符串，定义一个储存
+        * 结果的变量，返回变量，将字符串中符合截取开始位置的字符找出来并将其取出来，
+        * 储存在结果变量里*/
+/*
+        var Str="triangle";
+        function myStr(start,end,str){
+            var c="";
+            for(var i=start;i<=end;i++){
+                c+=str.charAt(i);
+            }
+            return c;
+        }
+        var result=myStr(3,6,Str);
+        console.log(result);
+*/
+//        写一个函数，参数为一个字符，一个字符串，根据这个字符 将 传入的字符串
+//        分割成多个字符串，并用数组返回这些分割的字符串
+//        var f=prompt("请输入一个字符");
+//        var p=prompt("请输入一个字符串");
+//        function stri(p,f){
+//            var newStr= p.split("-");
+//            for(var i=0;i<newStr.length;i++){
+//                document.write(newStr[i]+"<br/>");
+//            }
+//            var url="";
+//            for(var i=0;i<newStr.length-1;i++){
+//                url=url+newStr[i].concat(".");
+//            }
+//            url+=newStr[newStr.length-1];
+//            document.write(url);
+//        }
+//        var v=stri(p,f);
+//        console.log(v);
+        /*老师的代码：
+        * 思路：定义一个字符串，定义函数，函数中包括一个字符，一个字符串，在后面
+        * 调用该函数，最终返回的是一个新的数组，定义一个新的数组，将定义的字符串
+        * 中的字符一个个遍历出来 ，与输入的字符做比较，若满足则说明在字符串中找
+        * 到了输入的字符，定义一个分割符号，将分割符号分割的字符存在数组中，
+        * 否则分割符号=分割符号+遍历的字符，也要存在数组里，在if条件里清空分隔
+        * 符，返回字符串*/
+//        写一个函数，参数为一个字符串，返回这个字符串的反向字符串。
+//        charAt()返回指定位置的字符串
+//        var w=prompt("请输入一个字符串");
+//        console.log(w);
+////        var m=parseInt(prompt("请输入一个数字"));
+//        function test(w){
+//            for(var i=0;i< w.length;i++){
+//                w.lastIndexOf(i);
+//                console.log(w);
+//                w.charAt(w.length-1);
+//                console.log(w.charAt(w.length-1) );
+//            }
+//        }
+//        var x=test(w);
+//        document.write(x);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*1.用户户输入整数。
+    如果输入的是1～6 的整数，则程序输出:your number is in 1～6.  c=（用户输入的数）
+    如果输入的是其它数字，输出:Your number is too large. c=（用户输入的数）*/
+    var a=window.prompt("请输入一个整数");
+    if(a>0&&a<=6){
+        document.write("Your number is in 1-6.c="+a);
+    }else{
+        document.write("Your number is too large.c="+a);
+    }
+   /* 2.输入a ,b,c 三个个位数（0-9）之间，组成一个最大的三位数*/
+    var a=window.prompt("请输入一个0-9的数字");
+    var b=window.prompt("请输入一个0-9的数字");
+    var c=window.prompt("请输入一个0-9的数字")
+    if((a>=0&&a<=9)&&(b>=0&&b<=9)&&(c>=0&&c<=9)){
+       if(a>=b&&b>=c){
+           document.write(a+b+c);
+       }else if(a>=c&&c>=b){
+           document.write(a+c+b);
+       }else if(b>=a&&a>=c){
+           document.write(b+a+c);
+       }else if(b>=c&&c>=a){
+           document.write(b+c+a);
+       }else if(c>=a&&a>=b){
+           document.write(c+a+b);
+       }else if(c>=b&&b>=a){
+           document.write(c+b+a);
+       }
+        else{
+           document.write("输入有误");
+       }
+    }else{
+        alert("输入的数字有误");
+    }
+
+    /*3、判定2000-2500年中是闰年的年，输出闰年的条件是：
+     (1).能被4整除，但同时不能被100整除的年份都是闰年*/
+    var a=window.prompt("输入2000-2500之间的任意一个数");
+    if(a%4==0&&a%100!=0){
+        alert(a+"是闰年");
+    }else{
+        alert(a+"不是闰年");
+    }
+     /*(2).能被400整除的年份是闰年
+     其它情况都不是闰年*/
+    var b=window.prompt("输入2000-2500之间的任意一个数");
+    if(b%400==0){
+        alert(b+"是闰年");
+    }else{
+        alert(b+"不是闰年");
+    }
+   /* 4、编写代码:运输公司对用户计算运费.路程越远每公里运费越低。
+    每公里每吨货物的基本运费为10,货物重为w,距离为s,折扣为d,
+            则总运费f的计算公式为：f=10*w*s*(1-d)
+    s<250km        没有折扣
+    250<=s<500     2%折扣
+    500<=s<1000    5%折扣
+    1000<=s<2000   8%折扣
+    2000<=s<3000   10%折扣
+    3000<=s        15%折扣*/
+    var w=window.prompt("请输入货物的重量");
+    var s=window.prompt("请输入货物要送到哪里？");
+    var d;
+    if(s<250){
+        d=1-0;
+       document.write("运费是"+(f=10*w*s*d));
+    }else if(s>=250&&s<500){
+        d=1-0.02;
+        document.write("运费是"+(f=10*w*s*d));
+   }else if(s>=500&&s<1000){
+        d=1-0.05;
+        document.write("运费是"+(f=10*w*s*d));
+    }else if(s>=1000&&s<2000){
+        d=1-0.08;
+        document.write("运费是"+(f=10*w*s*d));
+    }else if(s>=2000&&s<3000){
+        d=1-0.1;
+        document.write("运费是"+(f=10*w*s*d))
+    }else{
+        d=1-0.15;
+        document.write("运费是"+(f=10*w*s*d))
+    }
+</script>
+</body>
+</html>

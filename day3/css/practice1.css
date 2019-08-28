@@ -1,0 +1,18 @@
+div{
+    width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    height: 120px;
+}
+h2,h4{
+    color: cadetblue;
+}
+p{
+    font-size: 16px;
+    font-family: serif;
+}
+ul li{
+    font-size: 16px;
+    font-family: serif;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+<!--<img id="bg" src="../images/apartments-bg.jpg" alt="#"/>-->
+<header>
+    <!--视频-->
+    <div class="video">
+    <video src="../images/home.mp4" autoplay="autoplay"/>
+    </div>
+    <!-- logo-->
+    <div class="logo">
+        <img src="../images/logo.png" alt="#"/>
+    </div>
+</header>
+<section>
+    <div class="father">
+        <div class="big">
+            <ul>
+                <li class="myLi">HOME</li>
+                <li class="myLi" onmouseover="openMenu(this)" onmouseout="outMenu()">
+                    ACCOMMODATION
+                    <ul>
+                        <li>Tariffs</li>
+                        <li>Luxury Rxtras</li>
+                        <li>Penthouse</li>
+                        <li>2 Bedroom Family</li>
+                        <li>2 Bedroom</li>
+                        <li>1 Bedroom</li>
+                        <li>Hastings Studio</li>
+                        <li>Studio</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi"  onmouseover="openMenu(this)" onmouseout="outMenu()">
+                    SERVIES
+                    <ul>
+                        <li>Contact Us</li>
+                        <li>FAQ's</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi"  onmouseover="openMenu(this)" onmouseout="outMenu()">
+                    PACKAGES
+                    <ul>
+                        <li>Gift Vouchers</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi">PEVIEWS</li>
+                <li class="myLi">LOCATION</li>
+                <li class="myLi"  onmouseover="openMenu(this)" onmouseout="outMenu()">
+                    NEWS
+                    <ul>
+                        <li>What's On</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi"  onmouseover="openMenu(this)" onmouseout="outMenu(this)">
+                    WEDDINGS
+                    <ul>
+                        <li>Wedding Gallery</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi"  onmouseover="openMenu(this)" onmouseout="outMenu()">
+                    GALLERY
+                    <ul>
+                        <li>Social Media Gallery</li>
+                        <li>Overview</li>
+                    </ul>
+                </li>
+                <li class="myLi">075447422</li>
+                <!--<li>-->
+                    <!--<div class="subMe">-->
+                        <!--<img src="../images/logo.svg" alt="#"/>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li></li>-->
+            </ul>
+        </div>
+        <div id="second">
+            <!--<img src="../images/" alt=""/>-->
+        </div>
+        <div class="k">
+            <img src="../images/datepicker.svg" alt="#"/>
+        </div>
+    </div>
+</section>
+<footer></footer>
+<script>
+    function openMenu(obj){
+        console.log(obj);
+        var ul=obj.parentNode;
+        console.log(ul);
+//        var subMenu=document.getElementsByTagName("li");
+//        var li=document.getElementsByClassName("myLi");
+//        console.log(li);
+        var ull=obj.getElementsByTagName("ul")[0];
+        console.log(ull);
+//        for(var i=0;i<li.length-1;i++){
+//            li[i].style.visibility="visible";
+//        }
+        ull.style.visibility="visible";
+    }
+    function outMenu(obj){
+        console.log(obj);
+//        var ull=obj.getElementsByTagName("ul")[0];
+//        console.log(ull);
+//        ull.style.visibility="hidden";
+    }
+
+    </script>
+</body>
+</html>
